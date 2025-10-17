@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduLearn - Mini Learning Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📘 EduLearn</h1>
+    <p>Explore topics, take quizzes, and test your knowledge!</p>
+  </header>
+
+  <!-- Topic Section -->
+  <section id="topics">
+    <h2>Available Topics</h2>
+    <div class="topic-list">
+      <div class="topic-card" onclick="startQuiz('html')">
+        <h3>HTML Basics</h3>
+        <p>Learn about structure, tags, and elements.</p>
+      </div>
+      <div class="topic-card" onclick="startQuiz('css')">
+        <h3>CSS Styling</h3>
+        <p>Understand colors, layouts, and animations.</p>
+      </div>
+      <div class="topic-card" onclick="startQuiz('js')">
+        <h3>JavaScript Fundamentals</h3>
+        <p>Discover variables, loops, and DOM manipulation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz" class="hidden">
+    <div id="quiz-header">
+      <h2 id="quiz-title">Quiz</h2>
+      <div id="timer">Time: <span id="time">15</span>s</div>
+    </div>
+    <div id="question-container">
+      <p id="question"></p>
+      <div id="options"></div>
+    </div>
+    <button id="next-btn" onclick="nextQuestion()">Next</button>
+  </section>
+
+  <!-- Result Section -->
+  <section id="result" class="hidden">
+    <h2>Quiz Completed ✅</h2>
+    <p>Your Score: <span id="score"></span></p>
+    <button onclick="reviewAnswers()">Review Answers</button>
+    <button onclick="goHome()">Go Back</button>
+    <div id="review" class="hidden"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 EduLearn | Mini Learning Platform</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
